@@ -1,4 +1,4 @@
-import { AiOutlineStock, AiOutlineInfoCircle } from "react-icons/ai";
+import { AiOutlineStock } from "react-icons/ai";
 import Testimonials from "./Testimonials";
 import { Link } from "react-router-dom";
 
@@ -19,17 +19,23 @@ const Landing = () => {
           <div className="flex items-center space-x-4">
             <Link
               to="/explore"
-              className="rounded-3xl flex-1 bg-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
+              className="rounded-3xl text-center bg-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
             >
               View Marketplace
             </Link>
             <Link
               to="/about"
-              className="link text-white border text-sm border-yellow-700 rounded-3xl flex-1"
+              className="rounded-3xl text-center border border-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
+            >
+              About VR Real Estate
+            </Link>
+            {/* <Link
+              to="/about"
+              className="link text-white border text-sm md:text-xl border-yellow-700 rounded-3xl flex-1 sm:flex-none"
             >
               <AiOutlineInfoCircle className="text-lg text-yellow-700 md:text-xl mx-1" />
               About VR Real Estate
-            </Link>
+            </Link> */}
           </div>
         </div>
 
