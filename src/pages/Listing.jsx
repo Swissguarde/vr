@@ -75,7 +75,7 @@ const Listing = () => {
       {shareLinkCopied && <p className="linkCopied">Link Copied!</p>}
       <div className="listingDetails">
         <p className="listingName">
-          {listing.name} - £
+          {listing.name} - <span className="text-green-400">BUSD</span>{" "}
           {listing.offer
             ? listing.discountedPrice
                 .toString()
@@ -91,7 +91,7 @@ const Listing = () => {
         </p>
         {listing.offer && (
           <p className="discountPrice">
-            ${listing.regularPrice - listing.regularPrice}
+            BUSD{listing.regularPrice - listing.regularPrice}
           </p>
         )}
 
@@ -107,7 +107,7 @@ const Listing = () => {
               : "1 Bathroom"}
           </li>
           <li>{listing.parking && "Parking Spot"}</li>
-          <li>{listing.furnished && "Furnished Spot"}</li>
+          <li>{listing.furnished && "Furnished"}</li>
         </ul>
 
         <p className="listingLocationTitle">Location</p>

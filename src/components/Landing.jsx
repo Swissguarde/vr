@@ -1,32 +1,35 @@
-import { AiOutlinePlayCircle, AiOutlineStock } from "react-icons/ai";
+import { AiOutlineStock, AiOutlineInfoCircle } from "react-icons/ai";
 import Testimonials from "./Testimonials";
 import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
     <>
-      <div className="pxt-4">
-        <div className="p-6 md:p-8 landingbg text-white">
-          <div className="max-w-xl my-24">
-            <h1 className="bg-gradient-to-r from-yellow-400 to-black bg-clip-text text-4xl font-[900] text-transparent sm:text-3xl md:text-7xl">
+      <div className="bg-[#ccc]">
+        <div className="px-6 md:px-8 pb-56 pt-56 landingbg">
+          <div className="max-w-xl">
+            <h1 className="text-yellow-500 text-4xl w-fit rounded-md font-[900] sm:text-3xl md:text-7xl">
               Future of real estate investing
             </h1>
           </div>
-          <h2 className="my-8 text-xl md:text-2xl">
-            Invest in rental properties for only £50.
+          <h2 className="my-8 text-xl md:text-2xl w-fit bg-yellow-600 p-1">
+            Invest in properties
           </h2>
 
           <div className="flex items-center space-x-4">
             <Link
               to="/explore"
-              className="rounded-3xl bg-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
+              className="rounded-3xl flex-1 bg-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
             >
               View Marketplace
             </Link>
-            <button className="link">
-              <AiOutlinePlayCircle className=" text-lg text-yellow-700 md:text-xl" />
+            <Link
+              to="/about"
+              className="link text-white border text-sm border-yellow-700 rounded-3xl flex-1"
+            >
+              <AiOutlineInfoCircle className="text-lg text-yellow-700 md:text-xl mx-1" />
               About VR Real Estate
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -47,7 +50,7 @@ const Landing = () => {
             </div>
 
             <div className="order-1 ">
-              <h2 className="bg-gradient-to-r from-yellow-400 to-black/60 bg-clip-text pt-4 text-2xl font-[900] text-transparent md:text-6xl">
+              <h2 className="bg-gradient-to-r from-yellow-400 to-gray-700 bg-clip-text pt-4 text-2xl font-[900] text-transparent md:text-6xl">
                 Investing in real estate has never been easier
               </h2>
               <div className="mt-8 flex items-center space-x-6">
@@ -58,8 +61,7 @@ const Landing = () => {
                   <h1 className="mb-2 text-2xl">Browse Properties</h1>
                   <p>
                     View detailed financial data, inspection reports, and more.
-                    All property documents are publicly available, E.g., 3139
-                    West Blvd
+                    All property documents are publicly available
                   </p>
                 </div>
               </div>

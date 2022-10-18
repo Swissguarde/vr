@@ -6,7 +6,7 @@ import bathtubIcon from "../assets/svg/bathtubIcon.svg";
 
 const ListingItem = ({ listing, id, onDelete, onEdit }) => {
   return (
-    <li className="categoryListing">
+    <li className="categoryListing my-10">
       <Link
         className="categoryListingLink"
         to={`/category/${listing.type}/${id}`}
@@ -20,7 +20,7 @@ const ListingItem = ({ listing, id, onDelete, onEdit }) => {
           <p className="categoryListingLocation">{listing.location}</p>
           <p className="categoryListingName">{listing.name}</p>
           <p className="categoryListingPrice">
-            £
+            <span className="text-green-400 mr-1">BUSD</span>
             {listing.offer
               ? listing.discountedPrice
                   .toString()

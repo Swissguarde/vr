@@ -21,7 +21,7 @@ const Testimonials = () => {
     },
   ];
   return (
-    <div>
+    <div className="bg-[#ccc]">
       <h1 className="mb-6 text-center text-2xl md:text-5xl">TESTIMONIALS</h1>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {texts.map((text) => (

@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Explore from "./pages/Explore";
 import Offers from "./pages/Offers";
 import Profile from "./pages/Profile";
@@ -14,13 +13,15 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import EditListing from "./pages/EditListing";
 import Landing from "./components/Landing";
-import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   return (
-    <>
+    <HelmetProvider>
       <Router>
-        <Header />
+        <Nav />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/explore" element={<Explore />} />
@@ -41,9 +42,9 @@ function App() {
             element={<Listing />}
           />
         </Routes>
-        <Navbar />
+        <Footer />
       </Router>
-    </>
+    </HelmetProvider>
   );
 }
 

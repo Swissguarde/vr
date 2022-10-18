@@ -2,10 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import rentCategoryImage from "../assets/jpg/rentCategoryImage.jpg";
 import sellCategoryImage from "../assets/jpg/sellCategoryImage.jpg";
+import Seo from "../components/Seo";
 
 const Explore = () => {
   return (
     <div className="explore">
+      <Seo
+        title="Marketplace | VR REAL ESTATE"
+        description="Discover listings for sale"
+        name="VR REAL ESTATE"
+        type="Explore"
+      />
       <header>
         <p className="pageHeader">Explore</p>
       </header>

@@ -16,6 +16,7 @@ import { Link, useNavigate } from "react-router-dom";
 import arrowRight from "../assets/svg/keyboardArrowRightIcon.svg";
 import homeIcon from "../assets/svg/homeIcon.svg";
 import ListingItem from "../components/ListingItem";
+import Seo from "../components/Seo";
 
 const Profile = () => {
   const auth = getAuth();
@@ -107,6 +108,12 @@ const Profile = () => {
 
   return (
     <div className="profile">
+      <Seo
+        title="Account | VR REAL ESTATE"
+        description="Your Profile"
+        name="VR REAL ESTATE"
+        type="Profile"
+      />
       <header className="profileHeader">
         <p className="pageHeader">My Profile</p>
         <button className="logOut" type="button" onClick={onLogout}>
