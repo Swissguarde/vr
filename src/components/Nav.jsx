@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo2.png";
+import logo from "../assets/logo.png";
 
 const Nav = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -18,7 +18,7 @@ const Nav = () => {
                 <img
                   src={logo}
                   alt=""
-                  className="object-cover w-10 h-10 mr-4 bg-black p-1 rounded"
+                  className="object-cover w-10 h-10 mr-4 bg-gray-800 p-1 rounded"
                 />
               </div>
               VR REAL ESTATE

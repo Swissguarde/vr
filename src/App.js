@@ -14,7 +14,6 @@ import About from "./pages/About";
 import EditListing from "./pages/EditListing";
 import Landing from "./components/Landing";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import { HelmetProvider } from "react-helmet-async";
 
 function App() {
@@ -42,7 +41,6 @@ function App() {
             element={<Listing />}
           />
         </Routes>
-        {/* <Footer /> */}
       </Router>
     </HelmetProvider>
   );
