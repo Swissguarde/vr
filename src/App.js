@@ -42,7 +42,7 @@ function App() {
             element={<Listing />}
           />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </HelmetProvider>
   );

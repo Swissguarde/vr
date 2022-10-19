@@ -114,7 +114,7 @@ const Profile = () => {
         name="VR REAL ESTATE"
         type="Profile"
       />
-      <header className="profileHeader">
+      <header className="profileHeader mt-24">
         <p className="pageHeader">My Profile</p>
         <button className="logOut" type="button" onClick={onLogout}>
           Logout
