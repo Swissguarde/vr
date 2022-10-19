@@ -13,7 +13,7 @@ const Explore = () => {
         name="VR REAL ESTATE"
         type="Explore"
       />
-      <header>
+      <header className="mt-24">
         <p className="pageHeader">Explore</p>
       </header>
       <main>
