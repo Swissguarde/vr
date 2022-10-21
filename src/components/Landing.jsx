@@ -18,7 +18,7 @@ const Landing = () => {
 
           <div className="flex items-center space-x-4">
             <Link
-              to="/explore"
+              to="/marketplace"
               className="rounded-3xl text-center bg-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
             >
               View Marketplace
