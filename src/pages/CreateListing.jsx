@@ -17,7 +17,7 @@ const CreateListing = () => {
   const [geolocationEnabled, setGeolocationEnabled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    type: "rent",
+    type: "sale",
     name: "",
     bedrooms: 1,
     bathrooms: 1,
@@ -233,13 +233,13 @@ const CreateListing = () => {
 
   return (
     <div className="profile">
-      <header>
+      <header className="mt-24">
         <p className="pageHeader">Create a listing</p>
       </header>
 
       <main>
         <form onSubmit={onSubmit}>
-          <label className="formLabel">Sell / Rent</label>
+          {/* <label className="formLabel">Sell / Rent</label>
           <div className="formButtons">
             <button
               type="button"
@@ -259,7 +259,7 @@ const CreateListing = () => {
             >
               Rent
             </button>
-          </div>
+          </div> */}
 
           <label className="formLabel">Name</label>
           <input

@@ -29,13 +29,6 @@ const Landing = () => {
             >
               About VR Real Estate
             </Link>
-            {/* <Link
-              to="/about"
-              className="link text-white border text-sm md:text-xl border-yellow-700 rounded-3xl flex-1 sm:flex-none"
-            >
-              <AiOutlineInfoCircle className="text-lg text-yellow-700 md:text-xl mx-1" />
-              About VR Real Estate
-            </Link> */}
           </div>
         </div>
 

@@ -18,7 +18,7 @@ const Nav = () => {
                 <img
                   src={logo}
                   alt=""
-                  className="object-cover w-10 h-10 mr-4 bg-gray-800 p-1 rounded"
+                  className="object-cover w-10 h-10 mr-4 border-y border-yellow-900 p-1 rounded"
                 />
               </div>
               VR REAL ESTATE
@@ -42,8 +42,8 @@ const Nav = () => {
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="nav-item">
                 <Link
-                  to="/explore"
-                  className="px-3 py-2 flex items-center text-xs md:text-xl leading-snug text-white hover:opacity-75"
+                  to="/marketplace"
+                  className="px-3 py-2 flex items-center text-xs md:text-xl leading-snug text-white hover:bg-yellow-900"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                   <span className="ml-2">Marketplace</span>
@@ -52,7 +52,7 @@ const Nav = () => {
               <li className="nav-item">
                 <Link
                   to="/about"
-                  className="px-3 py-2 flex items-center text-xs md:text-xl leading-snug text-white hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-xs md:text-xl leading-snug text-white hover:bg-yellow-900"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                   <span className="ml-2">About</span>
@@ -61,7 +61,7 @@ const Nav = () => {
               <li className="nav-item">
                 <Link
                   to="/sign-in"
-                  className="px-3 py-2 flex items-center text-xs md:text-xl leading-snug text-white hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-xs md:text-xl leading-snug text-white hover:bg-yellow-900"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                   <span className="ml-2">Log In</span>
@@ -70,7 +70,7 @@ const Nav = () => {
               <li className="nav-item">
                 <Link
                   to="/profile"
-                  className="px-3 py-2 flex items-center text-xs md:text-xl leading-snug text-white hover:opacity-75"
+                  className="px-3 py-2 flex items-center text-xs md:text-xl leading-snug text-white hover:bg-yellow-900"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                   <span className="ml-2">Profile</span>

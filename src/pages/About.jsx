@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
-
+import Dir from "../assets/dir.jpg";
 const About = () => {
   return (
     <div>
@@ -19,7 +19,7 @@ const About = () => {
               market share by using Virtual Reality tools and techniques.
             </div>
             <Link
-              to="/explore"
+              to="/marketplace"
               className="bg-yellow-700 text-center w-[80%] mx-auto px-6 py-4 rounded-2xl my-6 text-white "
             >
               View Properties
@@ -54,6 +54,20 @@ const About = () => {
           <div>
             HVR will create engaging, practical, and astonishing immersive
             experiences for virtual reality and augmented reality.{" "}
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-yellow-800">
+        <div className="p-8 flex flex-col md:flex-row items-center justify-center gap-4">
+          <img
+            src={Dir}
+            alt=""
+            className="object-cover h-80 rounded-3xl mb-2 sm:mb-0"
+          />
+          <div className="text-2xl max-w-md font-bold text-white">
+            This project is created by HOUSE OF VR for Dr Mohammed Nasser Al
+            Qahtani
           </div>
         </div>
       </div>

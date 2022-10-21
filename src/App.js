@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Explore from "./pages/Explore";
+// import Explore from "./pages/Explore";
 import Offers from "./pages/Offers";
 import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
@@ -15,6 +15,7 @@ import EditListing from "./pages/EditListing";
 import Landing from "./components/Landing";
 import Nav from "./components/Nav";
 import { HelmetProvider } from "react-helmet-async";
+import Marketplace from "./pages/Marketplace";
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/explore" element={<Explore />} />
+          {/* <Route path="/explore" element={<Explore />} /> */}
+
+          <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/about" element={<About />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/edit-listing/:listingId" element={<EditListing />} />
