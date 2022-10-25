@@ -13,6 +13,7 @@ import { db } from "../firebase.config";
 import toast from "react-hot-toast";
 import Spinner from "../components/Spinner";
 import ListComp from "../components/ListComp";
+import Seo from "../components/Seo";
 const Marketplace = () => {
   const [listings, setListings] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -110,10 +111,15 @@ const Marketplace = () => {
 
   return (
     <div className="p-4">
+      <Seo
+        title="MARKETPLACE | VR REAL ESTATE"
+        description="View all listings | VR REAL ESTATE"
+        name="VR REAL ESTATE"
+        type="Marketplace"
+      />
       <div className="flex items-center justify-between p-8 mt-20 border-b border-gray-200">
         <div className="text-yellow-800 ">
           <h2 className="text-2xl sm:text-4xl font-bold"> VR Marketplace</h2>
-          <p>Invest in properties</p>
         </div>
         <div className="hidden sm:inline">
           <img

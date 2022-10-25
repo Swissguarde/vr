@@ -5,6 +5,7 @@ import { getDoc, doc } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import SwiperCore, {
   Navigation,
@@ -24,7 +25,6 @@ const Listing = () => {
   const [listing, setListing] = useState(null);
   const [loading, setLoading] = useState(true);
   const [shareLinkCopied, setShareLinkCopied] = useState(false);
-
   const navigate = useNavigate();
   const params = useParams();
   // const auth = getAuth();
@@ -45,6 +45,7 @@ const Listing = () => {
   if (loading) {
     return <Spinner />;
   }
+  console.log(listing);
 
   return (
     <main>
@@ -83,13 +84,60 @@ const Listing = () => {
         <img src={shareIcon} alt="" />
       </div>
       {shareLinkCopied && <p className="linkCopied">Link Copied!</p>}
-      <div className="listingDetails">
-        <p className="text-yellow-800 text-3xl md:text-5xl font-semibold">
-          {listing.name}
-        </p>
-        <p className="listingLocation">{listing.location}</p>
 
-        <div className="my-2 text-2xl">
+      {listing.esprice && (
+        <div className="pt-5 pb-20 px-8 md:px-16 grid grid-cols-1 md:grid-cols-2 items-center gap-6 justify-between">
+          <div>
+            <div className="border-2 border-yellow-800 w-fit p-2 rounded-full">
+              ACTIVE
+            </div>
+
+            <div className="py-2">
+              <p className="text-yellow-800 text-3xl md:text-5xl font-semibold">
+                {listing.name}
+              </p>
+              <p className="listingLocation">{listing.location}</p>
+            </div>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-white text-yellow-800">
+            <div className="bg-[#ccc] p-2 rounded">
+              <div className="flex justify-between">
+                <div>Starting at</div>
+                <div className="font-bold">
+                  <span className="text-green-500 mr-2">BUSD</span>
+                  {listing.esprice}
+                </div>
+              </div>
+            </div>
+            <div className="my-6">
+              <div className="flex justify-between">
+                <div>Projected IRR</div>
+                <div className="font-bold">{listing.projected_irr}%</div>
+              </div>
+            </div>
+            <div className="my-6">
+              <div className="flex justify-between">
+                <div>COC Return</div>
+                <div className="font-bold">{listing.coc_return}%</div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between space-x-4">
+              <button className="bg-yellow-800 p-3 md:p-6 flex-1 text-white text-xl rounded-2xl">
+                BUY
+              </button>
+              <button className="bg-[#ccc] p-3 md:p-6 flex-1 text-xl rounded-2xl">
+                SELL
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="px-8 md:px-16 pb-12">
+        <div className="font-bold text-xl md:text-3xl">DETAILS</div>
+        <div className="text-xl">
           {listing.offer
             ? listing.discountedPrice
                 .toString()
@@ -99,37 +147,19 @@ const Listing = () => {
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
           <span className="text-green-400 ml-2">BUSD</span>{" "}
         </div>
-
-        <p className="listingType">
-          For {listing.type === "rent" ? "Rent" : "Sale"}
-        </p>
         {listing.offer && (
           <p className="discountPrice">
             BUSD{listing.regularPrice - listing.regularPrice}
           </p>
         )}
 
-        {/* <ul className="listingDetailsList">
-          <li>
-            {listing.bedrooms > 1
-              ? `${listing.bedrooms} Bedrooms`
-              : "1 Bedroom"}
-          </li>
-          <li>
-            {listing.bathrooms > 1
-              ? `${listing.bathrooms} Bathrooms`
-              : "1 Bathroom"}
-          </li>
-          <li>{listing.parking && "Parking Spot"}</li>
-          <li>{listing.furnished && "Furnished"}</li>
-        </ul> */}
-        <div className="flex justify-center items-center space-x-4">
+        <div className="flex justify-center items-center space-x-4 my-2">
           <div className="flex-col items-center justify-between p-3 rounded border-2 border-yellow-800">
             <div className="flex items-center justify-center">
               <BiBed />
             </div>
             <span className="text-center">
-              {listing.bedrooms > 1 ? `${listing.bedrooms} Bed` : "1 Bed"}
+              {listing.bedrooms > 1 ? `${listing.bedrooms} Beds` : "1 Bed"}
             </span>
           </div>
           <div className="flex-col items-center justify-between p-3 rounded border-2 border-yellow-800">
@@ -137,7 +167,7 @@ const Listing = () => {
               <BiBath />
             </div>
             <span className="text-center">
-              {listing.bathrooms > 1 ? `${listing.bathrooms} Bath` : "1 Bath"}{" "}
+              {listing.bathrooms > 1 ? `${listing.bathrooms} Baths` : "1 Bath"}{" "}
             </span>
           </div>
         </div>
@@ -166,15 +196,6 @@ const Listing = () => {
             </Marker>
           </MapContainer>
         </div>
-
-        {/* {auth.currentUser?.uid !== listing.userRef && (
-          <Link
-            to={`/contact/${listing.userRef}?listingName=${listing.name}`}
-            className="primaryButton"
-          >
-            Contact Landlord
-          </Link>
-        )} */}
       </div>
     </main>
   );

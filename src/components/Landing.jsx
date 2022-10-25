@@ -1,22 +1,26 @@
 import { AiOutlineStock } from "react-icons/ai";
 import Testimonials from "./Testimonials";
 import { Link } from "react-router-dom";
+import Seo from "./Seo";
 
 const Landing = () => {
   return (
-    <>
-      <div className="bg-[#ccc]">
+    <div>
+      <Seo
+        title="HOME | VR REAL ESTATE"
+        description="HOME | VR REAL ESTATE"
+        name="VR REAL ESTATE"
+        type="Home"
+      />
+      <div>
         <div className="px-6 md:px-8 pb-56 pt-56 landingbg">
           <div className="max-w-xl">
             <h1 className="text-yellow-500 text-4xl w-fit rounded-md font-[900] sm:text-3xl md:text-7xl">
               Future of real estate investing
             </h1>
           </div>
-          <h2 className="my-8 text-xl md:text-2xl w-fit bg-yellow-600 p-1">
-            Invest in properties
-          </h2>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 mt-6">
             <Link
               to="/marketplace"
               className="rounded-3xl text-center bg-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
@@ -96,7 +100,7 @@ const Landing = () => {
           <Testimonials />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Landing;
