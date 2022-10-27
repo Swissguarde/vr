@@ -14,6 +14,8 @@ import { HelmetProvider } from "react-helmet-async";
 import Marketplace from "./pages/Marketplace";
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
+import Blog from "./pages/Blog";
+import BlogDetails from "./pages/BlogDetails";
 function App() {
   return (
     <HelmetProvider>
@@ -30,9 +32,11 @@ function App() {
           </Route>
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/category/:categoryName" element={<Category />} />
           <Route path="/create-listing" element={<CreateListing />} />
+          <Route path="/blog/:blogId" element={<BlogDetails />} />
           <Route
             path="/category/:categoryName/:listingId"
             element={<Listing />}

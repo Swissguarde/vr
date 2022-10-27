@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
+  const location = useLocation();
 
+  const { pathname } = location;
   const showNav = () => {
     setNav((prev) => !prev);
   };
@@ -20,20 +22,51 @@ const Header = () => {
             <img
               src={logo}
               alt=""
-              className="object-cover w-10 h-10 mr-2 sm:mr-4 border-x border-yellow-900 bg-black/30 p-1 rounded"
+              className="object-cover w-24 mr-2 sm:mr-3 rounded"
             />
           </div>
           <div className="text-white">VR BRICKS</div>
         </Link>
 
-        <nav className="hidden md:flex gap-3 text-xl">
-          <Link to="/marketplace" className="text-white">
+        <nav className="hidden md:flex gap-6 text-xl">
+          <Link
+            to="/marketplace"
+            className={`${
+              pathname === "/marketplace"
+                ? "text-yellow-600 border-b-2 border-yellow-900"
+                : "text-white"
+            }`}
+          >
             Marketplace
           </Link>
-          <Link to="/about" className="text-white">
+          <Link
+            to="/blog"
+            className={`${
+              pathname === "/blog"
+                ? "text-yellow-600 border-b-2 border-yellow-900"
+                : "text-white"
+            }`}
+          >
+            Blog
+          </Link>
+          <Link
+            to="/about"
+            className={`${
+              pathname === "/about"
+                ? "text-yellow-600 border-b-2 border-yellow-900"
+                : "text-white"
+            }`}
+          >
             About
           </Link>
-          <Link to="/profile" className="text-white">
+          <Link
+            to="/profile"
+            className={`${
+              pathname === "/profile"
+                ? "text-yellow-600 border-b-2 border-yellow-900"
+                : "text-white"
+            }`}
+          >
             Profile
           </Link>
         </nav>
@@ -72,6 +105,13 @@ const Header = () => {
             className="text-white font-bold hover:text-yellow-700 duration-200 ease-in hover:bg-white p-3"
           >
             MARKETPLACE
+          </Link>
+          <Link
+            onClick={showNav}
+            to="/blog"
+            className="text-white font-bold hover:text-yellow-700 duration-200 ease-in hover:bg-white p-3"
+          >
+            BLOG
           </Link>
           <Link
             onClick={showNav}

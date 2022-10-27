@@ -13,16 +13,24 @@ const About = () => {
         <p className="text-center text-3xl md:text-5xl font-bold mt-20">
           VR BRICKS
         </p>
-        <div className="flex items-center justify-center my-12 max-w-[1000px] mx-auto text-xl">
-          Our vision is to reduce the distance by providing the virtual reality
-          solutions for your business and products. <br /> You products will be
-          virtually real and leave a real footprint on the viewer. Our vision is
-          to be the world's most innovative organization and institution of
-          virtually reality by offering astounding quality products through
-          immersive technology solutions for the world's most innovative
-          organization. <br /> VR bricks will create engaging, practical, and
-          astonishing immersive experiences for virtual reality and augmented
-          reality.
+        <div className="my-12 max-w-2xl mx-auto text-center text-base sm:text-xl">
+          <div className="flex flex-col gap-3">
+            <div>
+              Our vision is to reduce the distance by providing the virtual
+              reality solutions for your business and products.
+            </div>{" "}
+            <div>
+              You products will be virtually real and leave a real footprint on
+              the viewer. Our vision is to be the world's most innovative
+              organization and institution of virtually reality by offering
+              astounding quality products through immersive technology solutions
+              for the world's most innovative organization.{" "}
+            </div>
+            <div>
+              VR bricks will create engaging, practical, and astonishing
+              immersive experiences for virtual reality and augmented reality.
+            </div>
+          </div>
         </div>
       </div>
       <div className="p-6 md:p-8 max-w-md mx-auto py-20 flex flex-col sm:flex-row items-center justify-center gap-3">
