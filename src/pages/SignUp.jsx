@@ -62,9 +62,9 @@ const SignUp = () => {
   return (
     <div className="mt-12 mb-24">
       <Seo
-        title="Sign Up | VR REAL ESTATE"
+        title="Sign Up | VR BRICKS"
         description="Create a new account via email or google"
-        name="VR REAL ESTATE"
+        name="VR BRICKS"
         type="Sign Up"
       />
       <div className="p-6 md:p-8">

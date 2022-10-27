@@ -1,17 +1,18 @@
 import { AiFillStar } from "react-icons/ai";
+
 const Testimonials = () => {
   const texts = [
     {
       id: 1,
       name: "Josh Micheal",
       testimonial:
-        "I've never had a better customer service experience than with VR REAL ESTATE.",
+        "I've never had a better customer service experience than with VR BRICKS.",
     },
     {
       id: 2,
       name: "Sarah Terrence",
       testimonial:
-        "VR REAL ESTATE is the best way to invest in real estate in my opinion..",
+        "VR BRICKS is the best way to invest in real estate in my opinion..",
     },
     {
       id: 3,

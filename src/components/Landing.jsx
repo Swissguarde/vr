@@ -1,15 +1,15 @@
-import { AiOutlineStock } from "react-icons/ai";
 import Testimonials from "./Testimonials";
 import { Link } from "react-router-dom";
 import Seo from "./Seo";
+import House from "../assets/house.jpg";
 
 const Landing = () => {
   return (
     <div>
       <Seo
-        title="HOME | VR REAL ESTATE"
-        description="HOME | VR REAL ESTATE"
-        name="VR REAL ESTATE"
+        title="HOME | VR BRICKS"
+        description="HOME | VR BRICKS"
+        name="VR BRICKS"
         type="Home"
       />
       <div>
@@ -31,7 +31,7 @@ const Landing = () => {
               to="/about"
               className="rounded-3xl text-center border border-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
             >
-              About VR Real Estate
+              About VR BRICKS
             </Link>
           </div>
         </div>
@@ -40,19 +40,20 @@ const Landing = () => {
           <div className="grid grid-cols-1 items-center justify-center space-x-0 p-3 md:grid-cols-2 md:space-x-12 md:p-12">
             <div className="relative order-2 mt-10 ml-20 flex h-[250px] w-64 items-center sm:order-1 md:h-[400px] md:w-96">
               <img
-                src="https://rb.gy/gqpla3"
+                // src="https://rb.gy/gqpla3"
+                src={House}
                 alt=""
                 className="absolute rounded-[40px] object-cover"
               />
-              <div className="absolute top-[25%] -right-3 flex items-center rounded bg-green-400 px-4 py-1 font-bold text-white md:-right-10">
+              {/* <div className="absolute top-[25%] -right-3 flex items-center rounded bg-green-400 px-4 py-1 font-bold text-white md:-right-10">
                 <AiOutlineStock className="mr-2" /> 10% Rent Yield
               </div>
               <div className="absolute -left-6 bottom-[25%] flex items-center rounded bg-blue-400 px-4 py-1 font-bold text-white">
                 <AiOutlineStock className="mr-2" /> 8% interest
-              </div>
+              </div> */}
             </div>
 
-            <div className="order-1 ">
+            <div className="order-1">
               <h2 className="bg-gradient-to-r from-yellow-400 to-gray-700 bg-clip-text pt-4 text-2xl font-[900] text-transparent md:text-6xl">
                 Investing in real estate has never been easier
               </h2>

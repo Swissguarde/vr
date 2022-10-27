@@ -112,9 +112,9 @@ const Marketplace = () => {
   return (
     <div className="p-4">
       <Seo
-        title="MARKETPLACE | VR REAL ESTATE"
-        description="View all listings | VR REAL ESTATE"
-        name="VR REAL ESTATE"
+        title="MARKETPLACE | VR BRICKS"
+        description="View all listings | VR BRICKS"
+        name="VR BRICKS"
         type="Marketplace"
       />
       <div className="flex items-center justify-between p-8 mt-20 border-b border-gray-200">

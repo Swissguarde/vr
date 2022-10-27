@@ -8,9 +8,9 @@ const Explore = () => {
   return (
     <div className="explore">
       <Seo
-        title="Marketplace | VR REAL ESTATE"
+        title="Marketplace | VR BRICKS"
         description="Discover listings for sale"
-        name="VR REAL ESTATE"
+        name="VR BRICKS"
         type="Explore"
       />
       <header className="mt-24">

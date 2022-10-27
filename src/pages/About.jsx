@@ -1,74 +1,39 @@
-import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
 import Dir from "../assets/dir.jpg";
 const About = () => {
   return (
     <div>
       <Seo
-        title="About Us | VR REAL ESTATE"
+        title="About Us | VR BRICKS"
         description="Our Mission and Vison"
-        name="VR REAL ESTATE"
+        name="VR BRICKS"
         type="About"
       />
-      <div className="p-6 md:p-8">
-        <div className="text-center text-2xl font-bold">Mission Statement</div>
-        <div className="grid grid-cols-1 justify-center items-center md:grid-cols-2 py-8 gap-6 mb-20">
-          <div>
-            <div className="text-xl md:text-4xl font-bold text-yellow-700 ">
-              Our mission is to make it possible for businesses to enhance their
-              market share by using Virtual Reality tools and techniques.
-            </div>
-            <Link
-              to="/marketplace"
-              className="bg-yellow-700 text-center w-[80%] mx-auto px-6 py-4 rounded-2xl my-6 text-white "
-            >
-              View Properties
-            </Link>
-          </div>
-          <div>
-            <img
-              src="https://media.istockphoto.com/photos/mission-picture-id501539900?k=20&m=501539900&s=612x612&w=0&h=ByNSzVoqeIVFX2jAtZQe_hyeWu4gh4GTjaDnnCoLV_A="
-              alt=""
-              className="object-cover rounded"
-            />
-          </div>
+      <div className="p-6 md:p-8 bg-yellow-700 text-white">
+        <p className="text-center text-3xl md:text-5xl font-bold mt-20">
+          VR BRICKS
+        </p>
+        <div className="flex items-center justify-center my-12 max-w-[1000px] mx-auto text-xl">
+          Our vision is to reduce the distance by providing the virtual reality
+          solutions for your business and products. <br /> You products will be
+          virtually real and leave a real footprint on the viewer. Our vision is
+          to be the world's most innovative organization and institution of
+          virtually reality by offering astounding quality products through
+          immersive technology solutions for the world's most innovative
+          organization. <br /> VR bricks will create engaging, practical, and
+          astonishing immersive experiences for virtual reality and augmented
+          reality.
         </div>
       </div>
-
-      <div className="bg-black text-white px-4 py-6">
-        <div className="text-center text-2xl text-yellow-700 font-bold ">
-          Vision and Strategy
-        </div>
-        <div className="text-center max-w-4xl mx-auto text-2xl my-4">
-          <div>
-            Our vision to reduce the distance by providing the virtual reality
-            solutions of your business and products. You products will be
-            virtually real and leave a real footprint on the viewer.
-          </div>
-          <div className="my-6">
-            Our vision is to be the world’s most innovative organizations and
-            institutions of virtually reality. By offering astounding quality
-            products through immersive technology solutions for the world’s most
-            innovative organization.
-          </div>
-          <div>
-            HVR will create engaging, practical, and astonishing immersive
-            experiences for virtual reality and augmented reality.{" "}
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-yellow-800">
-        <div className="p-8 flex flex-col md:flex-row items-center justify-center gap-4">
-          <img
-            src={Dir}
-            alt=""
-            className="object-cover h-80 rounded-3xl mb-2 sm:mb-0"
-          />
-          <div className="text-2xl max-w-md font-bold text-white">
-            This project is created by HOUSE OF VR for Dr Mohammed Nasser Al
-            Qahtani
-          </div>
+      <div className="p-6 md:p-8 max-w-md mx-auto py-20 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <img
+          src={Dir}
+          className="object-cover rounded-full border-y-2 border-yellow-700 w-60 h-60"
+          alt=""
+        />
+        <div className="text-xl">
+          This project is created by HOUSE OF VR for Dr Mohammed Nasser Al
+          Qahtani
         </div>
       </div>
     </div>
