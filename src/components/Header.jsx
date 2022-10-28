@@ -13,7 +13,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="bg-yellow-800 flex justify-around items-center py-[25px]">
+      <header className="bg-yellow-800 flex justify-around fixed top-0 left-0 w-full z-[99] items-center py-[25px]">
         <Link
           to="/"
           className="flex items-center font-bold text-2xl md:text-3xl"
@@ -38,6 +38,16 @@ const Header = () => {
             }`}
           >
             Marketplace
+          </Link>
+          <Link
+            to="/create-listing"
+            className={`${
+              pathname === "/create-listing"
+                ? "text-yellow-600 border-b-2 border-yellow-900"
+                : "text-white"
+            }`}
+          >
+            List Property
           </Link>
           <Link
             to="/blog"
@@ -106,6 +116,14 @@ const Header = () => {
           >
             MARKETPLACE
           </Link>
+          <Link
+            onClick={showNav}
+            to="/create-listing"
+            className="text-white font-bold hover:text-yellow-700 duration-200 ease-in hover:bg-white p-3"
+          >
+            LIST PROPERTY
+          </Link>
+
           <Link
             onClick={showNav}
             to="/blog"
