@@ -116,7 +116,7 @@ const Landing = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-black items-center justify-between p-7 cursor-pointer w-full">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-between p-7 cursor-pointer w-full">
           {images.map((image) => (
             <div className="mx-auto">
               <img
@@ -143,7 +143,7 @@ const Landing = () => {
           </div>
         </div>
 
-        <div className="bg-black/90 pb-24 pt-10 text-white">
+        <div className="pb-24 pt-10 text-yellow-700">
           <div className="grid grid-cols-1 items-center justify-center space-x-0 p-3 md:grid-cols-2 md:space-x-12 md:p-12">
             <div className="relative order-2 mt-10 ml-20 flex h-[250px] w-64 items-center sm:order-1 md:h-[400px] md:w-96">
               <img
@@ -158,7 +158,7 @@ const Landing = () => {
                 Investing in real estate has never been easier
               </h2>
               <div className="mt-8 flex items-center space-x-6">
-                <div className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-yellow-700 p-6 text-3xl">
+                <div className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-yellow-700 text-white p-6 text-3xl">
                   1
                 </div>
                 <div className="mb-2">
@@ -170,7 +170,7 @@ const Landing = () => {
                 </div>
               </div>
               <div className="mt-8 flex items-center space-x-6">
-                <div className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-yellow-700 p-6 text-3xl">
+                <div className="flex h-8 w-8 items-center justify-center text-white rounded-[50%] bg-yellow-700 p-6 text-3xl">
                   2
                 </div>
                 <div className="mb-2">
@@ -182,7 +182,7 @@ const Landing = () => {
                 </div>
               </div>
               <div className="mt-8 flex items-center space-x-6">
-                <div className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-yellow-700 p-6 text-3xl">
+                <div className="flex h-8 w-8 text-white items-center justify-center rounded-[50%] bg-yellow-700 p-6 text-3xl">
                   3
                 </div>
                 <div className="mb-2">
