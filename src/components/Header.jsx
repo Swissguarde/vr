@@ -16,13 +16,13 @@ const Header = () => {
       <header className="bg-yellow-800 flex justify-around fixed top-0 left-0 w-full z-[99] items-center py-[25px]">
         <Link
           to="/"
-          className="flex items-center font-bold text-2xl md:text-3xl"
+          className="flex items-center font-bold text-xl md:text-3xl"
         >
           <div>
             <img
               src={logo}
               alt=""
-              className="object-cover w-24 mr-2 sm:mr-3 rounded"
+              className="object-cover w-16 mr-1 sm:mr-3 rounded"
             />
           </div>
           <div className="text-white">VR BRICKS</div>
