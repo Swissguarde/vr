@@ -13,7 +13,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="bg-yellow-800 flex justify-around fixed top-0 left-0 w-full z-[99] items-center py-[25px]">
+      <header className="bg-yellow-800 flex justify-around fixed top-0 left-0 w-full z-[99] items-center py-[15px]">
         <Link
           to="/"
           className="flex items-center font-bold text-xl md:text-3xl"
@@ -21,8 +21,8 @@ const Header = () => {
           <div>
             <img
               src={logo}
-              alt=""
-              className="object-cover w-16 mr-1 sm:mr-3 rounded"
+              alt="logo"
+              className="object-cover w-16 sm:w-24 mr-1 sm:mr-3 rounded"
             />
           </div>
           <div className="text-white">VR BRICKS</div>

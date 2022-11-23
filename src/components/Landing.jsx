@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Testimonials from "./Testimonials";
 import { Link } from "react-router-dom";
 import Seo from "./Seo";
@@ -14,7 +14,7 @@ import { BsPersonCheck } from "react-icons/bs";
 import { BiBuildings } from "react-icons/bi";
 import { RiMoneyDollarBoxLine } from "react-icons/ri";
 import { GoVerified } from "react-icons/go";
-import guide from "../assets/guide.mp4";
+import Modal from "./Modal";
 
 const Landing = () => {
   const images = [
@@ -85,6 +85,8 @@ const Landing = () => {
       icon: AiOutlineFieldTime,
     },
   ];
+
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="pb-20 transition duration-200">
       <Seo
@@ -94,7 +96,7 @@ const Landing = () => {
         type="Home"
       />
       <div>
-        {/* <div className="px-6 md:px-8 pb-56 pt-56 landingbg">
+        <div className="px-6 md:px-8 pb-56 pt-56 landingbg">
           <div className="max-w-xl">
             <h1 className="text-yellow-500 text-4xl w-fit rounded-md font-[900] sm:text-3xl md:text-7xl">
               Future of real estate investing
@@ -108,21 +110,29 @@ const Landing = () => {
             >
               View Marketplace
             </Link>
-            <Link
+            {/* <Link
               to="/about"
               className="rounded-3xl text-center border border-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
             >
               About VR BRICKS
-            </Link>
+            </Link> */}
+            <button
+              onClick={() => setIsOpen((prev) => !prev)}
+              className="rounded-3xl text-center border bg-white/60 p-2 text-sm text-yellow-700 md:p-4 md:text-xl"
+            >
+              About VR BRICKS
+            </button>
           </div>
-        </div> */}
-        <video
+        </div>
+        {/* <video
           src={guide}
           autoPlay
           loop
           muted
           className="mt-24 sm:mt-0 top-0 right-0 max-w-full min-w-full"
-        ></video>
+        ></video> */}
+        {/* {isOpen && <Modal />} */}
+        <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-between p-7 cursor-pointer w-full">
           {images.map((image) => (
