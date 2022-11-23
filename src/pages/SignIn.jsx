@@ -45,7 +45,7 @@ const SignIn = () => {
     }
   };
   return (
-    <div className="mt-12 mb-24">
+    <div className="mt-24 mb-24">
       <Seo
         title="Sign In | VR BRICKS"
         description="Sign in to your account via email or google"

@@ -98,7 +98,7 @@ const Profile = () => {
         name="VR BRICKS"
         type="Profile"
       />
-      <header className="profileHeader mt-24">
+      <header className="profileHeader mt-32">
         <p className="pageHeader">My Profile</p>
         <button className="logOut" type="button" onClick={onLogout}>
           Logout

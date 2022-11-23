@@ -49,7 +49,7 @@ const BlogDetails = () => {
             <p className="mt-6 text-gray-400 italic">{blogDetails.author}</p>
           </div>
 
-          <div className="my-10 max-w-3xl mx-auto sm:text-center p-4 sm:p-8">
+          <div className="my-10 max-w-6xl mx-auto sm:text-center p-4 sm:p-8 leading-loose">
             {blogDetails.content}
           </div>
         </>

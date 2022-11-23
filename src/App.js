@@ -16,6 +16,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Blog from "./pages/Blog";
 import BlogDetails from "./pages/BlogDetails";
+// import Footer from "./components/Footer";
 function App() {
   return (
     <HelmetProvider>

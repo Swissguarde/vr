@@ -10,7 +10,7 @@ const About = () => {
         type="About"
       />
       <div className="p-6 md:p-8 bg-yellow-700 text-white">
-        <p className="text-center text-3xl md:text-5xl font-bold mt-20">
+        <p className="text-center text-3xl md:text-5xl font-bold mt-32">
           ABOUT VR BRICKS
         </p>
         <div className="my-12 max-w-2xl mx-auto text-center text-base sm:text-xl">

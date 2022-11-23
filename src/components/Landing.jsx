@@ -14,6 +14,7 @@ import { BsPersonCheck } from "react-icons/bs";
 import { BiBuildings } from "react-icons/bi";
 import { RiMoneyDollarBoxLine } from "react-icons/ri";
 import { GoVerified } from "react-icons/go";
+import guide from "../assets/guide.mp4";
 
 const Landing = () => {
   const images = [
@@ -93,7 +94,7 @@ const Landing = () => {
         type="Home"
       />
       <div>
-        <div className="px-6 md:px-8 pb-56 pt-56 landingbg">
+        {/* <div className="px-6 md:px-8 pb-56 pt-56 landingbg">
           <div className="max-w-xl">
             <h1 className="text-yellow-500 text-4xl w-fit rounded-md font-[900] sm:text-3xl md:text-7xl">
               Future of real estate investing
@@ -114,7 +115,14 @@ const Landing = () => {
               About VR BRICKS
             </Link>
           </div>
-        </div>
+        </div> */}
+        <video
+          src={guide}
+          autoPlay
+          loop
+          muted
+          className="mt-24 sm:mt-0 top-0 right-0 max-w-full min-w-full"
+        ></video>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-between p-7 cursor-pointer w-full">
           {images.map((image) => (
