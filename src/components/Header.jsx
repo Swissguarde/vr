@@ -22,7 +22,7 @@ const Header = () => {
             <img
               src={logo}
               alt="logo"
-              className="object-cover w-16 sm:w-24 mr-1 sm:mr-3 rounded"
+              className="object-cover w-24 h-16 sm:h-20 sm:w-28 mr-1 sm:mr-3 rounded"
             />
           </div>
           <div className="text-white">VR BRICKS</div>

@@ -19,6 +19,7 @@ import "swiper/css/effect-fade";
 import Spinner from "../components/Spinner";
 import shareIcon from "../assets/svg/shareIcon.svg";
 import { BiBath, BiBed } from "react-icons/bi";
+import Progress from "../components/Progress";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const Listing = () => {
@@ -109,6 +110,13 @@ const Listing = () => {
                   {listing.esprice}
                 </div>
               </div>
+            </div>
+            <div className="my-6">
+              <div className="flex justify-between text-xs sm:text-base">
+                <div className="my-10l">Brick's Sold: {listing.sold}</div>
+                <div className="my-10l">Brick's Left: {listing.left}</div>
+              </div>
+              <Progress completed={(listing.sold / 1200).toFixed(4) * 100} />
             </div>
             <div className="my-6">
               <div className="flex justify-between">
