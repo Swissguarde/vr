@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const BlogItem = ({ blog, id }) => {
-  console.log(blog);
   return (
     <>
       <Link to={`/blog/${id}`}>
@@ -17,14 +16,6 @@ const BlogItem = ({ blog, id }) => {
                 VR BLOG
               </h2>
               <h2>{blog.blogTitle}</h2>
-            </div>
-            <div className="absolute flex items-center gap-3 bottom-4 left-5">
-              <img
-                src={blog.authorImage}
-                className="rounded-full object-cover w-14 h-14"
-                alt=""
-              />
-              <p>{blog.author}</p>
             </div>
           </div>
         </div>
