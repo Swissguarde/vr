@@ -31,7 +31,7 @@ const Testimonials = () => {
             className="h-[200px] flex-col justify-between rounded bg-[#ccc] p-6 shadow"
           >
             <div className="my-2 text-black/70 underline">{text.name}</div>
-            <div className="flex items-center space-x-1 text-yellow-700">
+            <div className="flex items-center space-x-1 text-blue-700">
               <div>
                 <AiFillStar />
               </div>

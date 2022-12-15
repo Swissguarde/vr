@@ -118,7 +118,7 @@ const Marketplace = () => {
         type="Marketplace"
       />
       <div className="flex items-center justify-between p-8 mt-20 border-b border-gray-200">
-        <div className="text-yellow-800 ">
+        <div className="text-blue-800 ">
           <h2 className="text-2xl sm:text-4xl font-bold"> VR Marketplace</h2>
         </div>
         <div className="hidden sm:inline">
@@ -152,7 +152,7 @@ const Marketplace = () => {
             {lastFetchedListing && (
               <div className="flex items-center justify-center">
                 <button
-                  className="p-2 rounded-2xl bg-yellow-800 w-fit text-center text-white"
+                  className="p-2 rounded-2xl bg-blue-800 w-fit text-center text-white"
                   onClick={onFetchMoreListings}
                 >
                   Load More

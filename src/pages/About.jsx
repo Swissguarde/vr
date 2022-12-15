@@ -9,7 +9,7 @@ const About = () => {
         name="VR BRICKS"
         type="About"
       />
-      <div className="p-6 md:p-8 bg-yellow-700 text-white">
+      <div className="p-6 md:p-8 bg-blue-700 text-white">
         <p className="text-center text-3xl md:text-5xl font-bold mt-32">
           ABOUT VR BRICKS
         </p>
@@ -36,7 +36,7 @@ const About = () => {
       <div className="p-6 md:p-8 max-w-md mx-auto py-20 flex flex-col sm:flex-row items-center justify-center gap-3">
         <img
           src={Dir}
-          className="object-cover rounded-full border-y-2 border-yellow-700 w-60 h-60"
+          className="object-cover rounded-full border-y-2 border-blue-700 w-60 h-60"
           alt=""
         />
         <div className="text-xl">

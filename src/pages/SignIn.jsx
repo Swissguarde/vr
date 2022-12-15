@@ -58,7 +58,7 @@ const SignIn = () => {
        shadow-xl md:w-1/2"
         >
           <div className="flex items-center space-x-1 md:space-x-4">
-            <div className="text-2xl font-semibold text-yellow-700 md:text-4xl mr-4">
+            <div className="text-2xl font-semibold text-blue-700 md:text-4xl mr-4">
               LOG IN
             </div>
             <p className="text-sm md:text-lg">
@@ -101,7 +101,7 @@ const SignIn = () => {
               </div>
             </div>
 
-            <button className="mb-4 block rounded-2xl bg-yellow-700 px-8 py-2 text-white">
+            <button className="mb-4 block rounded-2xl bg-blue-700 px-8 py-2 text-white">
               Log In
             </button>
 

@@ -233,7 +233,7 @@ const CreateListing = () => {
 
   return (
     <div className="profile">
-      <header className="mt-24">
+      <header className="mt-32">
         <p className="pageHeader">Create a listing</p>
       </header>
 

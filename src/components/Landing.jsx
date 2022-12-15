@@ -96,9 +96,9 @@ const Landing = () => {
         type="Home"
       />
       <div>
-        <div className="px-6 md:px-8 pb-56 pt-56 landingbg">
+        <div className="px-6 md:px-8 pb-56 pt-40 sm:pt-56 landingbg">
           <div className="max-w-xl">
-            <h1 className="text-yellow-500 text-4xl w-fit rounded-md font-[900] sm:text-3xl md:text-7xl">
+            <h1 className="text-white text-4xl pt-12 w-fit rounded-md font-[900] sm:text-3xl md:text-7xl">
               Future of real estate investing
             </h1>
           </div>
@@ -106,19 +106,19 @@ const Landing = () => {
           <div className="flex items-center space-x-4 mt-6">
             <Link
               to="/marketplace"
-              className="rounded-3xl text-center bg-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
+              className="rounded-3xl text-center bg-blue-700 p-2 text-sm text-white md:p-4 md:text-xl"
             >
               View Marketplace
             </Link>
             {/* <Link
               to="/about"
-              className="rounded-3xl text-center border border-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
+              className="rounded-3xl text-center border border-blue-700 p-2 text-sm text-white md:p-4 md:text-xl"
             >
               About VR BRICKS
             </Link> */}
             <button
               onClick={() => setIsOpen((prev) => !prev)}
-              className="rounded-3xl text-center border bg-white/60 p-2 text-sm text-yellow-700 md:p-4 md:text-xl"
+              className="rounded-3xl text-center border bg-white/60 p-2 text-sm text-blue-700 md:p-4 md:text-xl"
             >
               About VR BRICKS
             </button>
@@ -147,23 +147,23 @@ const Landing = () => {
           ))}
         </div>
 
-        <div className="marquee bg-yellow-700 text-white">
+        <div className="marquee bg-blue-700 text-white">
           <div className="maylike-products-container track">
             {carouselInfo.map((info) => (
               <div className="text-sm sm:text-xl flex justify-center items-center pt-6">
-                <span className="text-yellow-800 font-bold mr-2"> |</span>{" "}
+                <span className="text-blue-800 font-bold mr-2"> |</span>{" "}
                 {info.address}{" "}
                 <span className="text-green-500 mx-2">{info.coc}</span>
                 <span>BUSD{info.price}</span>{" "}
-                <span className="text-yellow-800 font-bold ml-2">|</span>
+                <span className="text-blue-800 font-bold ml-2">|</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="pb-24 pt-10 text-yellow-700">
+        <div className="pb-24 pt-10 text-blue-700">
           <div className="grid grid-cols-1 items-center justify-center space-x-0 p-3 md:grid-cols-2 md:space-x-12 md:p-12">
-            <div className="relative order-2 mt-10 ml-20 flex h-[250px] w-64 items-center sm:order-1 md:h-[400px] md:w-96">
+            <div className="relative order-2 mt-10 flex h-[250px] w-64 items-center mx-auto sm:order-1 md:h-[400px] md:w-96">
               <img
                 src={House}
                 alt=""
@@ -172,11 +172,11 @@ const Landing = () => {
             </div>
 
             <div className="order-1">
-              <h2 className="bg-gradient-to-r from-yellow-400 to-gray-700 bg-clip-text pt-4 text-2xl font-[900] text-transparent md:text-6xl">
+              <h2 className="bg-gradient-to-r from-blue-400 to-gray-700 bg-clip-text pt-4 text-2xl font-[900] text-transparent md:text-6xl">
                 Investing in real estate has never been easier
               </h2>
               <div className="mt-8 flex items-center space-x-6">
-                <div className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-yellow-700 text-white p-6 text-3xl">
+                <div className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-blue-700 text-white p-6 text-3xl">
                   1
                 </div>
                 <div className="mb-2">
@@ -188,7 +188,7 @@ const Landing = () => {
                 </div>
               </div>
               <div className="mt-8 flex items-center space-x-6">
-                <div className="flex h-8 w-8 items-center justify-center text-white rounded-[50%] bg-yellow-700 p-6 text-3xl">
+                <div className="flex h-8 w-8 items-center justify-center text-white rounded-[50%] bg-blue-700 p-6 text-3xl">
                   2
                 </div>
                 <div className="mb-2">
@@ -200,7 +200,7 @@ const Landing = () => {
                 </div>
               </div>
               <div className="mt-8 flex items-center space-x-6">
-                <div className="flex h-8 w-8 text-white items-center justify-center rounded-[50%] bg-yellow-700 p-6 text-3xl">
+                <div className="flex h-8 w-8 text-white items-center justify-center rounded-[50%] bg-blue-700 p-6 text-3xl">
                   3
                 </div>
                 <div className="mb-2">
@@ -215,18 +215,18 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="my-10 p-6 pt-24 md:p-8">
+        <div className="mb-10 p-6 md:p-8">
           <Testimonials />
         </div>
 
         <div className="p-4 md:p-12 grid grid-cols-1 md:grid-cols-3 justify-between items-center gap-6 md:gap-12">
           {gridInfo.map((grid) => (
             <div className="text-center w-full">
-              <div className="flex bg-slate-300 justify-center mx-auto  w-fit p-3 md:p-4 border-yellow-700 rounded-full">
+              <div className="flex bg-slate-300 justify-center mx-auto  w-fit p-3 md:p-4 border-blue-700 rounded-full">
                 {" "}
                 {React.createElement(grid.icon, { size: "40" })}
               </div>
-              <div className="text-xl my-4 text-yellow-700">{grid.header}</div>
+              <div className="text-xl my-4 text-blue-700">{grid.header}</div>
               <div className="text-sm">{grid.para}</div>
             </div>
           ))}
@@ -234,20 +234,20 @@ const Landing = () => {
         <div className="mt-20 flex justify-center items-center w-full">
           <Link
             to="/about"
-            className="rounded-3xl text-center bg-yellow-700 p-2 text-sm text-white md:p-4 md:text-xl"
+            className="rounded-3xl text-center bg-blue-700 p-2 text-sm text-white md:p-4 md:text-xl"
           >
             Learn More
           </Link>
         </div>
 
         <div className="mt-20 p-6 md:p-8">
-          <div className="text-3xl md:text-5xl text-orange-700 font-bold">
+          <div className="text-3xl md:text-5xl text-blue-700 font-bold">
             How our <br /> marketplace works
           </div>
 
           <div className="flex flex-col md:flex-row mx-auto justify-between items-center gap-6 mt-12 text-center text-white">
             <div className="grid grid-cols-1 justify-center items-center w-full gap-6">
-              <div className="bg-yellow-800 p-3 rounded">
+              <div className="bg-blue-800 p-3 rounded">
                 <p className="text-[gray] flex items-center justify-center">
                   Step 1{" "}
                   <span>
@@ -256,7 +256,7 @@ const Landing = () => {
                 </p>
                 <h2>Property submitted</h2>
               </div>
-              <div className="bg-yellow-800 p-3 rounded">
+              <div className="bg-blue-800 p-3 rounded">
                 <p className="text-[gray] flex items-center justify-center">
                   Step 2{" "}
                   <span>
@@ -265,7 +265,7 @@ const Landing = () => {
                 </p>
                 <h2>Property put under contract</h2>
               </div>
-              <div className="bg-yellow-800 p-3 rounded">
+              <div className="bg-blue-800 p-3 rounded">
                 <p className="text-[gray] flex items-center justify-center">
                   Step 3{" "}
                   <span>
@@ -274,7 +274,7 @@ const Landing = () => {
                 </p>
                 <h2>Property inspected</h2>
               </div>
-              <div className="bg-yellow-800 p-3 rounded">
+              <div className="bg-blue-800 p-3 rounded">
                 <p className="text-[gray] flex items-center justify-center">
                   Step 4{" "}
                   <span>
@@ -284,7 +284,7 @@ const Landing = () => {
                 <h2>Property listed</h2>
               </div>
             </div>
-            <div className="max-w-2xl w-full">
+            <div className="max-w-2xl mx-auto w-full">
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
                 alt=""

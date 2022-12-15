@@ -89,19 +89,19 @@ const Listing = () => {
       {listing.esprice && (
         <div className="pt-5 pb-20 px-8 md:px-16 grid grid-cols-1 md:grid-cols-2 items-center gap-6 justify-between">
           <div>
-            <div className="border-2 border-yellow-800 w-fit p-2 rounded-full">
+            <div className="border-2 border-blue-800 w-fit p-2 rounded-full">
               ACTIVE
             </div>
 
             <div className="py-2">
-              <p className="text-yellow-800 text-3xl md:text-5xl font-semibold">
+              <p className="text-blue-800 text-3xl md:text-5xl font-semibold">
                 {listing.name}
               </p>
               <p className="listingLocation">{listing.location}</p>
             </div>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white text-yellow-800">
+          <div className="p-6 rounded-2xl bg-white text-blue-800">
             <div className="bg-[#ccc] p-2 rounded">
               <div className="flex justify-between">
                 <div>Starting at</div>
@@ -132,7 +132,7 @@ const Listing = () => {
             </div>
 
             <div className="flex items-center justify-between space-x-4">
-              <button className="bg-yellow-800 p-3 md:p-6 flex-1 text-white text-xl rounded-2xl">
+              <button className="bg-blue-800 p-3 md:p-6 flex-1 text-white text-xl rounded-2xl">
                 BUY
               </button>
               <button className="bg-[#ccc] p-3 md:p-6 flex-1 text-xl rounded-2xl">
@@ -162,7 +162,7 @@ const Listing = () => {
         )}
 
         <div className="flex justify-center items-center space-x-4 my-2">
-          <div className="flex-col items-center justify-between p-3 rounded border-2 border-yellow-800">
+          <div className="flex-col items-center justify-between p-3 rounded border-2 border-blue-800">
             <div className="flex items-center justify-center">
               <BiBed />
             </div>
@@ -170,7 +170,7 @@ const Listing = () => {
               {listing.bedrooms > 1 ? `${listing.bedrooms} Beds` : "1 Bed"}
             </span>
           </div>
-          <div className="flex-col items-center justify-between p-3 rounded border-2 border-yellow-800">
+          <div className="flex-col items-center justify-between p-3 rounded border-2 border-blue-800">
             <div className="flex items-center justify-center">
               <BiBath />
             </div>
