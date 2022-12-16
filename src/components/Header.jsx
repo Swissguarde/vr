@@ -1,19 +1,40 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
   const location = useLocation();
 
   const { pathname } = location;
   const showNav = () => {
     setNav((prev) => !prev);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <header className="bg-blue-800 flex justify-between px-8 sm:px-12 py-4 fixed top-0 left-0 w-full z-[99] items-center">
+      <header
+        className={`${
+          scroll && "bg-blue-800"
+        } flex justify-between px-8 sm:px-12 py-2 fixed top-0 left-0 w-full z-[100] items-center shadow-md`}
+      >
         <Link
           to="/"
           className="flex items-center font-bold text-xl md:text-3xl"
@@ -25,16 +46,22 @@ const Header = () => {
               className="object-cover w-24 h-12 sm:h-20 sm:w-28 mr-1 sm:mr-3 rounded"
             />
           </div>
-          <div className="text-white hidden sm:block">VR BRICKS</div>
+          <div
+            className={`${
+              scroll ? "text-white" : "text-blue-500"
+            } hidden sm:block customFont tracking-wider`}
+          >
+            VR BRICKS
+          </div>
         </Link>
 
-        <nav className="hidden md:flex gap-6 text-xl">
+        <nav className="hidden md:flex gap-6 text-xl customFont">
           <Link
             to="/marketplace"
             className={`${
               pathname === "/marketplace"
                 ? "text-blue-600 border-b-2 border-blue-900"
-                : "text-white"
+                : "text-blue-400"
             }`}
           >
             Marketplace
@@ -44,7 +71,7 @@ const Header = () => {
             className={`${
               pathname === "/create-listing"
                 ? "text-blue-600 border-b-2 border-blue-900"
-                : "text-white"
+                : "text-blue-400"
             }`}
           >
             List Property
@@ -54,7 +81,7 @@ const Header = () => {
             className={`${
               pathname === "/blog"
                 ? "text-blue-600 border-b-2 border-blue-900"
-                : "text-white"
+                : "text-blue-400"
             }`}
           >
             Blog
@@ -64,7 +91,7 @@ const Header = () => {
             className={`${
               pathname === "/about"
                 ? "text-blue-600 border-b-2 border-blue-900"
-                : "text-white"
+                : "text-blue-400"
             }`}
           >
             About
@@ -74,7 +101,7 @@ const Header = () => {
             className={`${
               pathname === "/profile"
                 ? "text-blue-600 border-b-2 border-blue-900"
-                : "text-white"
+                : "text-blue-400"
             }`}
           >
             Profile
