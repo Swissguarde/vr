@@ -10,7 +10,7 @@ const Progress = ({ completed }) => {
   const fillerStyles = {
     height: "100%",
     width: `${completed}%`,
-    backgroundColor: "#854d0e",
+    backgroundColor: "#1E40AF",
     borderRadius: "inherit",
     textAlign: "right",
   };
@@ -19,6 +19,7 @@ const Progress = ({ completed }) => {
     padding: 5,
     color: "white",
     fontWeight: "bold",
+    marginRight: "10px",
   };
   return (
     <div style={containerStyles}>

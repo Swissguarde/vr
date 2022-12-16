@@ -11,7 +11,7 @@ const BlogDetails = () => {
   const params = useParams();
   useEffect(() => {
     const fetchBlogDetails = async () => {
-      const docRef = doc(db, "blog", params.blogId);
+      const docRef = doc(db, "blog", params.id);
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         setBlogDetails(docSnap.data());
@@ -19,7 +19,7 @@ const BlogDetails = () => {
       }
     };
     fetchBlogDetails();
-  }, [params.blogId]);
+  }, [params.id]);
   console.log(loading);
 
   if (loading) {

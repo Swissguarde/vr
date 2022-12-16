@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
-  const [scroll, setScroll] = useState(false);
 
   const location = useLocation();
 
@@ -14,27 +13,9 @@ const Header = () => {
     setNav((prev) => !prev);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <>
-      <header
-        className={`${
-          scroll && "bg-blue-800"
-        } flex justify-between px-8 sm:px-12 py-2 fixed top-0 left-0 w-full z-[100] items-center shadow-md`}
-      >
+      <header className="flex justify-between px-8 sm:px-12 py-2 absolute top-0 left-0 w-full z-[100] items-center shadow-md">
         <Link
           to="/"
           className="flex items-center font-bold text-xl md:text-3xl"
@@ -43,14 +24,10 @@ const Header = () => {
             <img
               src={logo}
               alt="logo"
-              className="object-cover w-24 h-12 sm:h-20 sm:w-28 mr-1 sm:mr-3 rounded"
+              className="object-cover w-24 h-12 pt-2 sm:h-20 sm:w-28 mr-1 sm:mr-3 rounded"
             />
           </div>
-          <div
-            className={`${
-              scroll ? "text-white" : "text-blue-500"
-            } hidden sm:block customFont tracking-wider`}
-          >
+          <div className="hidden sm:block text-blue-600 font-semibold customFont tracking-wider">
             VR BRICKS
           </div>
         </Link>
@@ -77,14 +54,14 @@ const Header = () => {
             List Property
           </Link>
           <Link
-            to="/blog"
+            to="/tech-outlay"
             className={`${
               pathname === "/blog"
                 ? "text-blue-600 border-b-2 border-blue-900"
                 : "text-blue-400"
             }`}
           >
-            Technical Paper
+            Technical Outlay
           </Link>
           <Link
             to="/about"
@@ -153,10 +130,10 @@ const Header = () => {
 
           <Link
             onClick={showNav}
-            to="/blog"
+            to="/tech-outlay"
             className="text-white font-bold hover:text-blue-700 duration-200 ease-in hover:bg-white p-3"
           >
-            TECHNICAL PAPER
+            TECHNICAL OUTLAY
           </Link>
           <Link
             onClick={showNav}

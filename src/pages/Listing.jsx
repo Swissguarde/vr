@@ -112,9 +112,9 @@ const Listing = () => {
               </div>
             </div>
             <div className="my-6">
-              <div className="flex justify-between text-xs sm:text-base">
-                <div className="my-10l">Brick's Sold: {listing.sold}</div>
-                <div className="my-10l">Brick's Left: {listing.left}</div>
+              <div className="flex justify-between mb-2 text-xs sm:text-base">
+                <div>Brick's Sold: {listing.sold}</div>
+                <div>Brick's Left: {listing.left}</div>
               </div>
               <Progress completed={(listing.sold / 1200).toFixed(4) * 100} />
             </div>

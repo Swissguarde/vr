@@ -33,11 +33,11 @@ function App() {
           </Route>
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/tech-outlay" element={<Blog />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/category/:categoryName" element={<Category />} />
           <Route path="/create-listing" element={<CreateListing />} />
-          <Route path="/blog/:blogId" element={<BlogDetails />} />
+          <Route path="/tech-outlay/:id" element={<BlogDetails />} />
           <Route
             path="/category/:categoryName/:listingId"
             element={<Listing />}

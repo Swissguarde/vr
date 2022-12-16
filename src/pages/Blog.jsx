@@ -79,13 +79,3 @@ const Blog = () => {
   );
 };
 export default Blog;
-
-//  {loading ? (
-//         <Spinner />
-//       ) : blogPost && blogPost.length > 0 ? (
-//         <>
-
-//         </>
-//       ) : (
-//         "No blog posts yet"
-//       )}
