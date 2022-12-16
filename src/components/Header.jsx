@@ -84,7 +84,7 @@ const Header = () => {
                 : "text-blue-400"
             }`}
           >
-            Blog
+            Technical Paper
           </Link>
           <Link
             to="/about"
@@ -156,7 +156,7 @@ const Header = () => {
             to="/blog"
             className="text-white font-bold hover:text-blue-700 duration-200 ease-in hover:bg-white p-3"
           >
-            BLOG
+            TECHNICAL PAPER
           </Link>
           <Link
             onClick={showNav}
