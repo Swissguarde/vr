@@ -97,7 +97,7 @@ const Landing = () => {
       />
       <div>
         <div className="px-6 md:px-8 pb-56 pt-40 sm:pt-56 landingbg">
-          <div className="max-w-xl">
+          <div className="max-w-2xl">
             <h1 className="text-white text-4xl pt-12 w-fit rounded-md font-[900] sm:text-3xl md:text-7xl">
               Future of real estate investing
             </h1>
@@ -110,12 +110,7 @@ const Landing = () => {
             >
               View Marketplace
             </Link>
-            {/* <Link
-              to="/about"
-              className="rounded-3xl text-center border border-blue-700 p-2 text-sm text-white md:p-4 md:text-xl"
-            >
-              About VR BRICKS
-            </Link> */}
+
             <button
               onClick={() => setIsOpen((prev) => !prev)}
               className="rounded-3xl text-center border bg-white/60 p-2 text-sm text-blue-700 md:p-4 md:text-xl"
@@ -124,14 +119,7 @@ const Landing = () => {
             </button>
           </div>
         </div>
-        {/* <video
-          src={guide}
-          autoPlay
-          loop
-          muted
-          className="mt-24 sm:mt-0 top-0 right-0 max-w-full min-w-full"
-        ></video> */}
-        {/* {isOpen && <Modal />} */}
+
         <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-between p-7 cursor-pointer w-full">
