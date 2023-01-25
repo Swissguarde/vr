@@ -53,10 +53,7 @@ const Profile = () => {
   const metaInstall = () => {
     setMeta(false);
     const currentURL = new URL(window.location.href);
-    const forwarderOrigin =
-      currentURL.hostname === "localhost"
-        ? "http://localhost:3000"
-        : "https://www.vrbricks.com";
+    const forwarderOrigin = currentURL.hostname;
     const onboarding = new MetaMaskOnboarding({ forwarderOrigin });
     onboarding.startOnboarding();
   };
