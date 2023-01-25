@@ -82,7 +82,7 @@ const MetaMask = () => {
             onClick={connectWallet}
             disabled={isFetching}
             className={`${
-              isFetching && "cursor-progress"
+              isFetching && "cursor-progress bg-blue-400"
             } bg-blue-700 px-6 py-4 rounded text-white cursor-pointer`}
           >
             Connect Wallet
