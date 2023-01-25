@@ -16,7 +16,7 @@ import arrowRight from "../assets/svg/keyboardArrowRightIcon.svg";
 import homeIcon from "../assets/svg/homeIcon.svg";
 import ListingItem from "../components/ListingItem";
 import Seo from "../components/Seo";
-import MetaMaskOnboarding from "@metamask/onboarding";
+// import MetaMaskOnboarding from "@metamask/onboarding";
 // import { ethers } from "ethers";
 
 const Profile = () => {
@@ -32,53 +32,53 @@ const Profile = () => {
 
   //
   // const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const [meta, setMeta] = useState(false);
-  const [isConnected, setIsConnected] = useState(false);
-  const [isFetching, setIsFetching] = useState(false);
-  const [userAccounts, setUserAccounts] = useState(null);
-  // const [accountBalance, setAccountBalance] = useState(null);
-  const { ethereum } = window;
+  // const [meta, setMeta] = useState(false);
+  // const [isConnected, setIsConnected] = useState(false);
+  // const [isFetching, setIsFetching] = useState(false);
+  // const [userAccounts, setUserAccounts] = useState(null);
+  // // const [accountBalance, setAccountBalance] = useState(null);
+  // const { ethereum } = window;
 
-  useEffect(() => {
-    const checkMetaInstalled = () => {
-      if (ethereum) {
-        setMeta(true);
-      } else {
-        setMeta(false);
-      }
-    };
-    checkMetaInstalled();
-  }, [ethereum]);
+  // useEffect(() => {
+  //   const checkMetaInstalled = () => {
+  //     if (ethereum) {
+  //       setMeta(true);
+  //     } else {
+  //       setMeta(false);
+  //     }
+  //   };
+  //   checkMetaInstalled();
+  // }, [ethereum]);
 
-  const metaInstall = () => {
-    setMeta(false);
-    // const currentURL = new URL(window.location.href);
-    // const forwarderOrigin = currentURL.hostname;
-    try {
-      const onboarding = new MetaMaskOnboarding();
-      onboarding.startOnboarding();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const metaInstall = () => {
+  //   setMeta(false);
+  //   // const currentURL = new URL(window.location.href);
+  //   // const forwarderOrigin = currentURL.hostname;
+  //   try {
+  //     const onboarding = new MetaMaskOnboarding();
+  //     onboarding.startOnboarding();
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  const connectWallet = async () => {
-    try {
-      const accounts = await ethereum.request({
-        method: "eth_requestAccounts",
-      });
-      setIsFetching(true);
-      setUserAccounts(accounts[0]);
-      // let balance = await provider.getBalance(accounts[0]);
-      // let bal = ethers.utils.formatEther(balance);
-      // setAccountBalance(bal);
-      setIsConnected(true);
-      setIsFetching(false);
-    } catch (error) {
-      console.log(error);
-      setIsConnected(false);
-    }
-  };
+  // const connectWallet = async () => {
+  //   try {
+  //     const accounts = await ethereum.request({
+  //       method: "eth_requestAccounts",
+  //     });
+  //     setIsFetching(true);
+  //     setUserAccounts(accounts[0]);
+  //     // let balance = await provider.getBalance(accounts[0]);
+  //     // let bal = ethers.utils.formatEther(balance);
+  //     // setAccountBalance(bal);
+  //     setIsConnected(true);
+  //     setIsFetching(false);
+  //   } catch (error) {
+  //     console.log(error);
+  //     setIsConnected(false);
+  //   }
+  // };
 
   //
 
@@ -194,7 +194,7 @@ const Profile = () => {
         </div>
 
         {/*  */}
-        <div className="mt-20 p-6">
+        {/* <div className="mt-20 p-6">
           <h2>MetaMask</h2>
           <p className="my-4 italic">
             Click the button to connect your metamask wallet to vr bricks
@@ -230,7 +230,7 @@ const Profile = () => {
               </button>
             )}
           </div>
-        </div>
+        </div> */}
 
         {/*  */}
 
