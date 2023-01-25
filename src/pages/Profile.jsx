@@ -138,6 +138,14 @@ const Profile = () => {
             />
           </form>
         </div>
+        <div className="my-10">
+          <Link
+            className="bg-blue-700 p-3 w-fit text-white rounded-md"
+            to="/meta"
+          >
+            Connect MetaMask Wallet
+          </Link>
+        </div>
         <Link to="/create-listing" className="createListing">
           <img src={homeIcon} alt="home" />
           <p>Create a listing</p>
