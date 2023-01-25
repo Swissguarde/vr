@@ -52,10 +52,14 @@ const Profile = () => {
 
   const metaInstall = () => {
     setMeta(false);
-    const currentURL = new URL(window.location.href);
-    const forwarderOrigin = currentURL.hostname;
-    const onboarding = new MetaMaskOnboarding({ forwarderOrigin });
-    onboarding.startOnboarding();
+    // const currentURL = new URL(window.location.href);
+    // const forwarderOrigin = currentURL.hostname;
+    try {
+      const onboarding = new MetaMaskOnboarding();
+      onboarding.startOnboarding();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const connectWallet = async () => {
