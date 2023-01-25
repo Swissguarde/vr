@@ -16,7 +16,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import Blog from "./pages/Blog";
 import BlogDetails from "./pages/BlogDetails";
-import MetaMask from "./pages/MetaMask";
+// import MetaMask from "./pages/MetaMask";
 // import Footer from "./components/Footer";
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/tech-outlay" element={<Blog />} />
-          <Route path="/meta" element={<MetaMask />} />
+          {/* <Route path="/meta" element={<MetaMask />} /> */}
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/category/:categoryName" element={<Category />} />
           <Route path="/create-listing" element={<CreateListing />} />
