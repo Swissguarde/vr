@@ -22,16 +22,6 @@ const About = () => {
           process and makes it easy for anyone to invest in real estate using
           the power of blockchain.
         </div>
-
-        <div>
-          <div className="flex items-center justify-center mb-4">
-            <img
-              src={Dir}
-              className="object-cover rounded-full border-y-2 border-blue-700 w-60 h-60"
-              alt="pfp"
-            />
-          </div>
-        </div>
       </div>
     </div>
   );
