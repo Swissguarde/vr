@@ -31,10 +31,6 @@ const About = () => {
               alt="pfp"
             />
           </div>
-          <div className="text-xl text-center">
-            This project is created by HOUSE OF VR for Dr Mohammed Nasser Al
-            Qahtani
-          </div>
         </div>
       </div>
     </div>
