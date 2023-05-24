@@ -14,7 +14,18 @@ import { BsPersonCheck } from "react-icons/bs";
 import { BiBuildings } from "react-icons/bi";
 import { RiMoneyDollarBoxLine } from "react-icons/ri";
 import { GoVerified } from "react-icons/go";
-import Modal from "./Modal";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  Button,
+  Flex,
+  Text,
+} from "@chakra-ui/react";
 
 const Landing = () => {
   const images = [
@@ -87,6 +98,10 @@ const Landing = () => {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const handleClose = () => {
+    setModalOpen(false);
+  };
   return (
     <div className="pb-20 transition duration-200">
       <Seo
@@ -112,11 +127,35 @@ const Landing = () => {
             </Link>
 
             <button
-              onClick={() => setIsOpen((prev) => !prev)}
+              onClick={() => setModalOpen(true)}
               className="rounded-3xl text-center border bg-white/60 p-2 text-sm text-blue-700 md:p-4 md:text-xl"
             >
               About VR BRICKS
             </button>
+
+            <Modal
+              size={{ base: "xs", sm: "4xl" }}
+              isOpen={modalOpen}
+              onClose={handleClose}
+            >
+              <ModalOverlay />
+              <ModalContent>
+                <ModalCloseButton zIndex={99} />
+                <ModalBody>
+                  <div className="h-96 w-full">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/CY0cdbnN7Pk"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </ModalBody>
+              </ModalContent>
+            </Modal>
           </div>
         </div>
 
