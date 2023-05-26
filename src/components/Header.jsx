@@ -27,7 +27,7 @@ const Header = () => {
               className="object-cover w-24 h-12 pt-2 sm:h-20 sm:w-28 mr-1 sm:mr-3 rounded"
             />
           </div>
-          <div className="hidden sm:block font-semibold customFont tracking-wider">
+          <div className=" font-semibold customFont tracking-wider">
             VR BRICKS
           </div>
         </Link>

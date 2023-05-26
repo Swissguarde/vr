@@ -10,21 +10,20 @@ import {
   ModalContent,
   ModalOverlay,
 } from "@chakra-ui/react";
+import { DefaultPlayer as Video } from "react-html5video";
+import "react-html5video/dist/styles.css";
 import { AiFillTag, AiOutlineFieldTime } from "react-icons/ai";
 import { BiBuildings } from "react-icons/bi";
 import { BsPersonCheck } from "react-icons/bs";
 import { FaCoins } from "react-icons/fa";
 import { GoVerified } from "react-icons/go";
 import { RiMoneyDollarBoxLine } from "react-icons/ri";
-import ReactPlayer from "react-player";
 import forbes from "../assets/forbes.svg";
 import google from "../assets/google.svg";
 import House from "../assets/house.jpg";
 import insider from "../assets/insider.svg";
 import nbc from "../assets/nbc.svg";
-import videoSrc from "../assets/vrbrickslr.webm";
-import { DefaultPlayer as Video } from "react-html5video";
-import "react-html5video/dist/styles.css";
+import videoSrc from "../assets/vrvideo.mp4";
 
 const Landing = () => {
   const images = [
@@ -142,7 +141,7 @@ const Landing = () => {
                 <ModalCloseButton zIndex={99} />
                 <ModalBody>
                   <Video>
-                    <source src={videoSrc} type="video/webm" />
+                    <source src={videoSrc} type="video/mp4" />
                   </Video>
                 </ModalBody>
               </ModalContent>
