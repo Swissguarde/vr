@@ -239,31 +239,9 @@ const CreateListing = () => {
 
       <main>
         <form onSubmit={onSubmit}>
-          {/* <label className="formLabel">Sell / Rent</label>
-          <div className="formButtons">
-            <button
-              type="button"
-              className={type === "sale" ? "formButtonActive" : "formButton"}
-              id="type"
-              value="sale"
-              onClick={onMutate}
-            >
-              Sell
-            </button>
-            <button
-              type="button"
-              className={type === "rent" ? "formButtonActive" : "formButton"}
-              id="type"
-              value="rent"
-              onClick={onMutate}
-            >
-              Rent
-            </button>
-          </div> */}
-
           <label className="formLabel">Name</label>
           <input
-            className="formInputName"
+            className="formInputName bg-gray-300"
             type="text"
             id="name"
             value={name}

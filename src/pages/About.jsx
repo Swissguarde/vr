@@ -1,5 +1,4 @@
 import Seo from "../components/Seo";
-import Dir from "../assets/dir.jpg";
 const About = () => {
   return (
     <div className="my-32 text-blue-600">
@@ -13,7 +12,7 @@ const About = () => {
         ABOUT US
       </div>
       <div className="max-w-3xl mx-auto">
-        <div className="my-12 font-medium px-12 text-xl">
+        <div className="my-12 font-medium px-12 text-xl text-center">
           Welcome to VR BRICKS! We are a team of experts that specialize in
           providing clients with a unique and innovative way to invest in the
           real estate market using the power of blockchain. We understand that

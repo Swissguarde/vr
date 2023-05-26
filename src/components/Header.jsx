@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between px-8 sm:px-12 py-2 absolute top-0 left-0 w-full z-[100] items-center shadow-md">
+      <header className="bg-blue-700 text-white flex justify-between px-8 sm:px-12 py-2 fixed top-0 left-0 w-full z-[100] items-center shadow-md">
         <Link
           to="/"
           className="flex items-center font-bold text-xl md:text-3xl"
@@ -27,7 +27,7 @@ const Header = () => {
               className="object-cover w-24 h-12 pt-2 sm:h-20 sm:w-28 mr-1 sm:mr-3 rounded"
             />
           </div>
-          <div className="hidden sm:block text-blue-600 font-semibold customFont tracking-wider">
+          <div className="hidden sm:block font-semibold customFont tracking-wider">
             VR BRICKS
           </div>
         </Link>
@@ -36,9 +36,8 @@ const Header = () => {
           <Link
             to="/marketplace"
             className={`${
-              pathname === "/marketplace"
-                ? "text-blue-600 border-b-2 border-blue-900"
-                : "text-blue-400"
+              pathname === "/marketplace" &&
+              "text-blue-200 border-b-2 border-blue-900"
             }`}
           >
             Marketplace
@@ -46,9 +45,8 @@ const Header = () => {
           <Link
             to="/create-listing"
             className={`${
-              pathname === "/create-listing"
-                ? "text-blue-600 border-b-2 border-blue-900"
-                : "text-blue-400"
+              pathname === "/create-listing" &&
+              "text-blue-200 border-b-2 border-blue-900"
             }`}
           >
             List Property
@@ -56,9 +54,8 @@ const Header = () => {
           <Link
             to="/tech-outlay"
             className={`${
-              pathname === "/blog"
-                ? "text-blue-600 border-b-2 border-blue-900"
-                : "text-blue-400"
+              pathname === "/tech-outlay" &&
+              "text-blue-200 border-b-2 border-blue-900"
             }`}
           >
             Technical Outlay
@@ -66,9 +63,8 @@ const Header = () => {
           <Link
             to="/about"
             className={`${
-              pathname === "/about"
-                ? "text-blue-600 border-b-2 border-blue-900"
-                : "text-blue-400"
+              pathname === "/about" &&
+              "text-blue-200 border-b-2 border-blue-900"
             }`}
           >
             About
@@ -76,9 +72,8 @@ const Header = () => {
           <Link
             to="/profile"
             className={`${
-              pathname === "/profile"
-                ? "text-blue-600 border-b-2 border-blue-900"
-                : "text-blue-400"
+              pathname === "/profile" &&
+              "text-blue-200 border-b-2 border-blue-900"
             }`}
           >
             Profile

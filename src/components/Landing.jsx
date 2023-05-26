@@ -1,31 +1,30 @@
 import React, { useState } from "react";
-import Testimonials from "./Testimonials";
 import { Link } from "react-router-dom";
 import Seo from "./Seo";
+import Testimonials from "./Testimonials";
 
-import House from "../assets/house.jpg";
-import google from "../assets/google.svg";
-import insider from "../assets/insider.svg";
-import forbes from "../assets/forbes.svg";
-import nbc from "../assets/nbc.svg";
-import { FaCoins } from "react-icons/fa";
-import { AiFillTag, AiOutlineFieldTime } from "react-icons/ai";
-import { BsPersonCheck } from "react-icons/bs";
-import { BiBuildings } from "react-icons/bi";
-import { RiMoneyDollarBoxLine } from "react-icons/ri";
-import { GoVerified } from "react-icons/go";
 import {
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
   ModalBody,
-  ModalFooter,
-  Button,
-  Flex,
-  Text,
+  ModalCloseButton,
+  ModalContent,
+  ModalOverlay,
 } from "@chakra-ui/react";
+import { AiFillTag, AiOutlineFieldTime } from "react-icons/ai";
+import { BiBuildings } from "react-icons/bi";
+import { BsPersonCheck } from "react-icons/bs";
+import { FaCoins } from "react-icons/fa";
+import { GoVerified } from "react-icons/go";
+import { RiMoneyDollarBoxLine } from "react-icons/ri";
+import ReactPlayer from "react-player";
+import forbes from "../assets/forbes.svg";
+import google from "../assets/google.svg";
+import House from "../assets/house.jpg";
+import insider from "../assets/insider.svg";
+import nbc from "../assets/nbc.svg";
+import videoSrc from "../assets/vrbrickslr.webm";
+import { DefaultPlayer as Video } from "react-html5video";
+import "react-html5video/dist/styles.css";
 
 const Landing = () => {
   const images = [
@@ -142,17 +141,9 @@ const Landing = () => {
               <ModalContent>
                 <ModalCloseButton zIndex={99} />
                 <ModalBody>
-                  <div className="h-96 w-full">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/CY0cdbnN7Pk"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
+                  <Video>
+                    <source src={videoSrc} type="video/webm" />
+                  </Video>
                 </ModalBody>
               </ModalContent>
             </Modal>
